@@ -1,14 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Từ điển Tiếng Việt</title>
+    <!-- Bootstrap CSS -->
+    <link href="lib/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Thêm một số tùy chỉnh CSS nếu cần */
+        body {
+            margin-top: 20px;
+        }
+
+        #resultList li strong {
+            color: #2c3e50;
+            font-size: 18px;
+        }
+    </style>
 </head>
 
 <body>
-    Làm thơ như mơ
+    <div class="container">
+        <h1 class="mb-4">Ứng dụng Từ điển Tiếng Việt</h1>
+
+        <div class="row mb-3">
+            <div class="col-md-8">
+                <input type="text" id="searchWord" class="form-control" placeholder="Nhập từ để tìm">
+            </div>
+            <div class="col-md-4">
+                <button id="searchButton" class="btn btn-primary w-100">Tìm từ</button>
+            </div>
+        </div>
+
+        <div class="row mb-4">
+            <div class="col-md-4">
+                <button id="randomButton" class="btn btn-secondary w-100">Lấy 20 từ ngẫu nhiên</button>
+            </div>
+        </div>
+
+        <ul id="resultList" class="list-group"></ul>
+    </div>
+
+    <!-- jQuery -->
+    <script src="lib/js/jquery-3.6.0.min.js"></script>
+    <!-- Bootstrap Bundle JS (bao gồm Popper) -->
+    <script src="lib/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS (handleWords.js sẽ được cập nhật sau) -->
+    <!-- Nhúng file words.js -->
+    <script src="words.js"></script>
+    <!-- Nhúng file handleWords.js -->
+    <script src="handleWords.js"></script>
+
 </body>
 
 </html>
